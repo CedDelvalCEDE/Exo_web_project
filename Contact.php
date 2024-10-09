@@ -1,7 +1,6 @@
 <?php
 $metaDescription = "Page de contact de mon site";
-require_once __DIR__ . DIRECTORY_SEPARATOR . "header.php";
-require_once __DIR__ . DIRECTORY_SEPARATOR . "test_ob_start.php"
+require_once __DIR__ . DIRECTORY_SEPARATOR . "structure.php";
 ?>
     <h1>Contact</h1>
     <fieldset>
@@ -18,7 +17,5 @@ require_once __DIR__ . DIRECTORY_SEPARATOR . "test_ob_start.php"
             <input class="right-stink" type="reset" value="annuler">
         </form>
     </fieldset>
-<?php
-echo $html;
-require_once __DIR__ . DIRECTORY_SEPARATOR . "footer.php";
-?>
+    <?=$explicate?>
+    <?=$footer?>
