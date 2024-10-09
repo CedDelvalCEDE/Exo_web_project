@@ -1,4 +1,5 @@
 <?php ob_start(); ?>
+
 <!DOCTYPE html>
 <html lang='fr'>
     <head>
@@ -16,10 +17,8 @@
             </div>
         </header>
         <main>
-        <?php
-        $header = ob_get_clean();
-        ob_start()
-        ?>
+
+<?php $header = ob_get_clean(); ob_start(); ?>
 
         </main>
         <footer>
@@ -27,11 +26,12 @@
         </footer>
     </body>
 </html>
-<?php $footer = ob_get_clean();
-ob_start();
-?>
-    <div>
-        <h2>Explicatif</h2>
-        <p>Ce site sert de test</p>
-    </div>
+
+<?php $footer = ob_get_clean(); ob_start(); ?>
+
+<div>
+    <h2>Explicatif</h2>
+    <p>Ce site sert de test</p>
+</div>
+
 <?php $explicate = ob_get_clean(); ?>
