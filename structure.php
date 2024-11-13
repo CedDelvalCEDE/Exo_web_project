@@ -19,9 +19,7 @@ ob_start();
         <header>
             <div class="menu-bar">
                 <a <?php if ($_SERVER["REQUEST_URI"] == "/index.php") { echo "class='select'";} else { echo "class='menu-btn'";} ?> href='index.php'>Accueil</a>
-                <?php
-                // <a <?php if ($_SERVER["REQUEST_URI"] == "/Contact.php") { echo "class='select'";} else { echo "class='menu-btn'";} ?> href='Contact.php'>Contact</a>
-                ?>
+                <a <?php if ($_SERVER["REQUEST_URI"] == "/Contact.php") { echo "class='select'";} else { echo "class='menu-btn'";} ?> href='Contact.php'>Contact</a>
             </div>
         </header>
         <main>
