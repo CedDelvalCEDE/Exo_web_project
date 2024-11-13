@@ -1,8 +1,8 @@
 <?php
 $metaDescription = "Page de contact de mon site";
 require_once __DIR__ . DIRECTORY_SEPARATOR . "structure.php";
+$form_data_content = ["","","",""]; // used for keeping the correct entries of a cancel form
 echo $header;
-$form_data_content = ["","","",""]
 ?>
 <h1>Contact</h1>
 <fieldset>
@@ -23,13 +23,13 @@ $form_data_content = ["","","",""]
 echo $explicate;
 echo $footer;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $form_data_name = ["user_name", "user_surname", "user_mail", "message"];
-    $not_required = false;
+    $form_data_name = ["user_name", "user_surname", "user_mail", "message"]; // used to structure the loop
+    $not_required = false; // needed for the required values
     $form_data = [];
     $flag_good_entry = true;
     foreach ($form_data_name as $index) {
-        $not_required = ($index == "user_surname") ? true : false;
-        [$min, $max] = ($index != "message") ? [2,255] : [10,3000] ;
+        $not_required = ($index == "user_surname") ? true : false; // used to pass empty values when it's allowed
+        [$min, $max] = ($index != "message") ? [2,255] : [10,3000] ; // set the size of the field
         if (isset($_POST[$index]) && (!empty($_POST[$index]) || $not_required)) {
             if (good_lenght($_POST[$index], $min, $max)) {
                 $form_data[] = $_POST[$index];
