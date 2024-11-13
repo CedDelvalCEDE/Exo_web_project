@@ -47,7 +47,9 @@ function create_table() {
         user_id INT AUTO_INCREMENT PRIMARY KEY,
         user_pseudo VARCHAR(255) NOT NULL,
         user_password VARCHAR(255) NOT NULL,
-        user_email VARCHAR(255) UNIQUE
+        user_email VARCHAR(255) UNIQUE,
+        user_active_account BOOLEAN,
+        user_activation_code VARCHAR(5)
         ) ENGINE=InnoDB";
         $pdo->exec($request);
     }
@@ -103,7 +105,7 @@ function get_user_connect(string $user, string $password) {
 function set_new_user(string $user, string $password, string $email) {
     try {
         $pdo = connexion_db();
-        $request = "INSERT INTO t_users_info (user_pseudo, user_password, user_email) VALUES ( :user_f , :password_f , :email_f )";
+        $request = "INSERT INTO t_users_info (user_pseudo, user_password, user_email, user_active_account) VALUES ( :user_f , :password_f , :email_f , TRUE )";
         $result = $pdo->prepare($request);
         $result->bindValue(':user_f', $user, PDO::PARAM_STR);
         $result->bindValue(':password_f', $password, PDO::PARAM_STR);
