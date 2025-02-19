@@ -5,7 +5,7 @@
             <meta charset='utf-8'>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta name="description" content="<?=$metaDescription?>">
-            <title>Web</title>
+            <title><?=$metaDescription?></title>
             <link href='Style.css' rel="stylesheet" type="text/css">
     </head>
     <body>
