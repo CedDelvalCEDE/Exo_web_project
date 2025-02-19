@@ -1,11 +1,4 @@
-
-
-<?php
-// this file has the static structure of the website in two variables [$header, $footer]
-// explicate is a facultative variable
-ob_start(); 
-?>
-
+<?php ob_start()?>
 <!DOCTYPE html>
 <html lang='fr'>
     <head>
@@ -23,9 +16,7 @@ ob_start();
             </div>
         </header>
         <main>
-
 <?php $header = ob_get_clean(); ob_start(); ?>
-
         </main>
         <footer>
             Cédric Delval
@@ -34,10 +25,3 @@ ob_start();
 </html>
 
 <?php $footer = ob_get_clean(); ob_start(); ?>
-
-<div>
-    <h2>Explicatif</h2>
-    <p>Ce site sert de test</p>
-</div>
-
-<?php $explicate = ob_get_clean(); ?>

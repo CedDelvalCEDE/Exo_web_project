@@ -1,7 +1,7 @@
 <?php
 $metaDescription = "Page d'inscription de mon site";
-require_once __DIR__ . DIRECTORY_SEPARATOR . "structure.php";
-require_once __DIR__ . DIRECTORY_SEPARATOR . "Cookies.php";
+require_once __DIR__ . DIRECTORY_SEPARATOR . "template" . DIRECTORY_SEPARATOR . "header.php";
+require_once __DIR__ . DIRECTORY_SEPARATOR . "template" . DIRECTORY_SEPARATOR . "footer.php";
 echo $header;
 ?>
 <h1>Inscription</h1>
@@ -20,6 +20,5 @@ echo $header;
     </form>
 </fieldset>
 <?php
-echo $explicate;
 echo $footer;
 ?>

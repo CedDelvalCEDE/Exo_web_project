@@ -11,7 +11,7 @@ function catch_exceptions(PDOException $e): void
 
 function connexion_db() : ?PDO {
     $server_name = "localhost";
-    $admin_name = "cede";
+    $admin_name = "root";
     $password = "3e615282";
     $database_name = "ifosupDB";
     try {
