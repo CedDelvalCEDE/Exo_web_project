@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . DIRECTORY_SEPARATOR . "App" . DIRECTORY_SEPARATOR . "Model.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $form_data_name = ["surnom", "motDePasse"];
     $form_data = [];
