@@ -1,11 +1,11 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $form_data_name = ["user_name", "user_surname", "user_mail", "message"];
+    $form_data_name = ["nom", "prenom", "email", "message"];
     $not_required = false;
     $form_data = [];
     $flag_good_entry = true;
     foreach ($form_data_name as $index) {
-        $not_required = ($index == "user_surname") ? true : false;
+        $not_required = ($index == "prenom") ? true : false;
         [$min, $max] = ($index != "message") ? [2,255] : [10,3000] ;
         if (isset($_POST[$index]) && (!empty($_POST[$index]) || $not_required)) {
             if (good_lenght($_POST[$index], $min, $max)) {
@@ -19,10 +19,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $flag_good_entry = false;
         }
     }
-    if (!$flag_good_entry) {
-        
+    if ($flag_good_entry) {
+        $postAnswer = "Le formulaire a bien été envoyé !";
+    }
+    else {
+        $postAnswer = "Le formulaire n'a pas été envoyé !";
     }
 }
+
 function good_lenght($entry, $min, $max) {
     $entry_len = strlen($entry);
     if ($entry_len > $min && $entry_len < $max) {

@@ -9,7 +9,7 @@ function catch_exceptions(PDOException $e): void
     }
 }
 
-function connexion_db() : ?PDO {
+function connexion_db(): ?PDO {
     $server_name = "localhost";
     $admin_name = "root";
     $password = "3e615282";
@@ -21,6 +21,7 @@ function connexion_db() : ?PDO {
     }
     catch(PDOException $e) {
         catch_exceptions($e);
+        return null;
     }
 }
 
@@ -32,7 +33,9 @@ function create_db() {
     try {
         $pdo = new PDO("mysql:host=$server_name", $admin_name, $password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $request = "CREATE DATABASE $database_name DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;";
+        $request = "CREATE DATABASE $database_name
+                    DEFAULT CHARACTER SET utf8 
+                    DEFAULT COLLATE utf8_general_ci;";
         $pdo->exec($request);
     }
     catch(PDOException $e) {
@@ -48,8 +51,6 @@ function create_table() {
         user_pseudo VARCHAR(255) NOT NULL,
         user_password VARCHAR(255) NOT NULL,
         user_email VARCHAR(255) UNIQUE,
-        user_active_account BOOLEAN,
-        user_activation_code VARCHAR(5)
         ) ENGINE=InnoDB";
         $pdo->exec($request);
     }
