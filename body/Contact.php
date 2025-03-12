@@ -7,7 +7,7 @@ require_once __DIR__ . DIRECTORY_SEPARATOR . "template" . DIRECTORY_SEPARATOR . 
 ?>
 <?=$header?>
 <h1>Contactez Nous</h1>
-<form action="/App/form_worker.php" method="post">
+<form action="/App/contactForm.php" method="post">
     <label for="nom">Votre nom</label><br>
     <input type="text" id="nom" name="nom" required minlength="2" maxlength="255"><br>
     <label for="prenom">Votre prénom</label><br>

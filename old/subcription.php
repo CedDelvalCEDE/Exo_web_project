@@ -11,10 +11,10 @@ echo $header;
         <input class="right-stink" type="text" name="user_name" id="user_name" required></input><br>
         <label for="user_mail">Votre email</label>
         <input class="right-stink" type="email" name="user_mail" id="user_mail" required></input><br>
-        <label for="user_name">Votre mot de passe</label>
-        <input class="right-stink" type="password" name="user_name" id="user_name" required></input><br>
-        <label for="user_name">Votre mot de passe de confirmation</label>
-        <input class="right-stink" type="password" name="user_name" id="user_name" required></input><br>
+        <label for="password">Votre mot de passe</label>
+        <input class="right-stink" type="password" name="password" id="password" required></input><br>
+        <label for="passwordC">Votre mot de passe de confirmation</label>
+        <input class="right-stink" type="password" name="passwordC" id="passwordC" required></input><br>
         <input type="submit" value="envoyer">
         <input class="right-stink" type="reset" value="annuler">
     </form>

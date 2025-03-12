@@ -11,8 +11,9 @@
     <body>
         <header>
             <div class="menu-bar">
-                <a <?php if ($_SERVER["REQUEST_URI"] == "/index.php") { echo "class='select'";} else { echo "class='menu-btn'";} ?> href='./index.php'>Accueil</a>
-                <a <?php if ($_SERVER["REQUEST_URI"] == "/Contact.php") { echo "class='select'";} else { echo "class='menu-btn'";} ?> href='./body/Contact.php'>Contact</a>
+                <a <?php if ($_SERVER["REQUEST_URI"] == "/index.php") { echo "class='select'";} else { echo "class='menu-btn'";} ?> href='/index.php'>Accueil</a>
+                <a <?php if ($_SERVER["REQUEST_URI"] == "/Contact.php") { echo "class='select'";} else { echo "class='menu-btn'";} ?> href='/body/Contact.php'>Contact</a>
+                <a <?php if ($_SERVER["REQUEST_URI"] == "/Connexion.php") { echo "class='select'";} else { echo "class='menu-btn'";} ?> href='/body/Connexion.php'>Connexion</a>
             </div>
         </header>
         <main>
