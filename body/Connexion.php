@@ -1,12 +1,12 @@
 <?php
 $metaDescription = "Page de connexion";
 $pageTitre = "Connexion";
-require_once __DIR__ . DIRECTORY_SEPARATOR . "template" . DIRECTORY_SEPARATOR . "header.php";
-require_once __DIR__ . DIRECTORY_SEPARATOR . "template" . DIRECTORY_SEPARATOR . "footer.php";
+require_once __DIR__ . DIRECTORY_SEPARATOR . ".."  . DIRECTORY_SEPARATOR . "template" . DIRECTORY_SEPARATOR . "header.php";
+require_once __DIR__ . DIRECTORY_SEPARATOR . ".."  . DIRECTORY_SEPARATOR . "template" . DIRECTORY_SEPARATOR . "footer.php";
 echo $header;
 ?>
 <h1>Connexion</h1>
-<fieldset>
+<fieldset class="Container">
     <form action="/App/connexionForm.php" method="post">
         <label for="surnom">Votre pseudo</label>
         <input class="right-stink" type="text" name="surnom" id="surnom" minlength="2" maxlength="255" required></input><br>
@@ -16,7 +16,7 @@ echo $header;
         <input class="right-stink" type="reset" value="annuler">
     </form>
     <p>
-    Si vous souhaitez vous <a href='/body/Inscription.php'>Inscrire</a>
+    Si vous souhaitez vous <a href='./Inscription.php'>Inscrire</a>
     </p>
 </fieldset>
 <?php

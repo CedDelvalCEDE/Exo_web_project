@@ -1,12 +1,12 @@
 <?php
 $metaDescription = "Page d'inscription";
 $pageTitre = "Inscription";
-require_once __DIR__ . DIRECTORY_SEPARATOR . "template" . DIRECTORY_SEPARATOR . "header.php";
-require_once __DIR__ . DIRECTORY_SEPARATOR . "template" . DIRECTORY_SEPARATOR . "footer.php";
+require_once __DIR__ . DIRECTORY_SEPARATOR . ".."  . DIRECTORY_SEPARATOR . "template" . DIRECTORY_SEPARATOR . "header.php";
+require_once __DIR__ . DIRECTORY_SEPARATOR . ".."  . DIRECTORY_SEPARATOR . "template" . DIRECTORY_SEPARATOR . "footer.php";
 echo $header;
 ?>
 <h1>Inscription</h1>
-<fieldset>
+<fieldset class="Container">
     <form action="/App/inscriptionForm.php" method="post">
         <label for="surnom">Votre pseudo</label>
         <input class="right-stink" type="text" name="surnom" id="surnom" minlength="2" maxlength="255" required></input><br>
