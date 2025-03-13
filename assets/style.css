@@ -30,18 +30,15 @@ h2{
 	display:flex;
 	flex-direction:row;
 	justify-content:space-around;
-	border:1px solid white;
-	background-color: #3a76ef;
-	border-radius:12.5px;
 }
 .menu-btn{
 	margin-right:10px;
 	margin-left:10px;
 	display:block;
-	border:4px solid #EF3A00;
-	padding:5px;
+	border:1px solid #005BEA;
+	padding:20px;
 	border-radius:12.5px;
-	background-color:#E96B42;
+	background:linear-gradient(45deg, #87CEFA, #1E90FF);
 	font-family: "Kanit", sans-serif;
 	font-size:1.2em;
 	font-weight: 700;
@@ -51,12 +48,65 @@ h2{
     margin-right:10px;
 	margin-left:10px;
 	display:block;
-	border:4px solid #3a76ef;
-	padding:5px;
+	border:1px solid #3a76ef;
+	padding:20px;
 	border-radius:12.5px;
 	font-family: "Kanit", sans-serif;
 	font-size:1.2em;
 	font-weight: 700;
 	font-style: normal;
-    background-color:#79c98f;
+    background:linear-gradient(45deg, #aad2f6, #929cf1);
+}
+.Container {
+    background: #8dcefd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.submit {
+    background: linear-gradient(45deg, #1e90ff, #00c3ff);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+	margin: 5px;
+}
+.input-setup {
+	margin-bottom: 10px;
+}
+label {
+	display: inline-block;
+    background: linear-gradient(45deg, #79c98f, #00c3ff);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+	margin-bottom: 10px;
+}
+input {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+input:focus {
+    border-color: #1e90ff;
+    box-shadow: 0 0 8px rgba(30, 144, 255, 0.5);
+}
+textarea {
+	padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.25em;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
